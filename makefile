@@ -10,4 +10,4 @@ trie.o: trie/trie.c trie/trie.h
 	gcc $(CFLAGS) -c $<
 
 clean:
-	rm -f .out .o
+	rm -f index.out index.o trie.o

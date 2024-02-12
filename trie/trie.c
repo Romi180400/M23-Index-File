@@ -1,13 +1,3 @@
-/**
- * @file trie.c
- * @author Yarin Avisidris (yarinavisidris100.com)
- * @brief the following is the implementation of the Trie data structure.
- * @version 0.1
- * @date 2023-05-24
- * 
- * @copyright Copyright (c) 2023
- * 
- */
 #include "trie.h"
 #include <stdlib.h>
 
@@ -91,7 +81,7 @@ void trie_destroy(Trie * trie) {
     if(*trie != NULL) {
         Trie t = *trie;
         for(i=0;i<95;i++) {
-            if(t->next[i] != NULL) 
+            if(t->next[i] != NULL)
                 trie_destroy_sub(t->next[i]);
         }
         free(*trie);
